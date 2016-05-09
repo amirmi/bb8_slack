@@ -9,7 +9,7 @@ Usage:
 Every time someones mentions you on slack, bb8 will change colors (disco), and will move it's head.
 if the word "urgent" is mentioned along your name, bb8 will turn red :)
 
-In addition you call can call *http://locahost:3000/move* (moves head) and *http://locahost:3000/disco* (changes colors) directly :)
+In addition you call can call *http://localhost:3000/bb8/<action>* to directly play with bb8 (see bb8api.js for commands)
 
 
 Installing:
@@ -27,7 +27,7 @@ run the following command
 
 e.g. 
 
-> peripheral discovered (a1e9d4fed6df41ce81aa9816f8058077 with address <d7:5e:27:ef:12:c6, unknown>, connectable true, RSSI -45:
+> peripheral discovered (**a1e9d4fed6df41ce81aa9816f8058077** with address <d7:5e:27:ef:12:c6, unknown>, connectable true, RSSI -45:
 	hello my local name is:
 		BB-12C6
 	can I interest you in any of the following advertised services:
@@ -36,8 +36,6 @@ e.g.
 		"3330"
 	my TX power level is:
 		6
-
-your key will be: a1e9d4fed6df41ce81aa9816f8058077
 		
 (for more information: https://github.com/orbotix/sphero.js#connecting-to-bb-8ollie) 
 
@@ -45,9 +43,8 @@ your key will be: a1e9d4fed6df41ce81aa9816f8058077
 (https://api.slack.com/tokens)
 
 **SLACK_USER**  
-
 you can see it in the logs, first time after you run npm start
-
+> Connected to Origami as Mr. Smith>**U02FGJZEU**
 
 
 

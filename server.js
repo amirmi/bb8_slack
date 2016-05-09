@@ -7,19 +7,18 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/move', function (req, res) {
-  bb8api.lookAround();
+app.param('bb8action', function (req, res, next, id) {
+    if (bb8api.hasOwnProperty(id)) {
+        bb8api[id]();
+    }
+    else {
+        res.send("Unknown command");
+    }
 });
 
-app.get('/disco', function (req, res) {
-  bb8api.disco();
+app.get('/bb8/:bb8action', function (req, res) {
+    res.send('Done');
 });
-
-app.get('/clear', function (req, res) {
-  res.send('Clear');
-  bb8api.color(0x000000);
-});
-
 
 
 app.listen(3000, function () {

@@ -13,21 +13,27 @@ function connect() {
         bb8.ping(function (err, data) {
             console.log(err || data);
         });
-
-        (async(function* () {
-            console.log("::START CALIBRATION::");
-            bb8.startCalibration();
-
-            yield Promise.delay(10000)
-            console.log("::FINISH CALIBRATION::");
-            bb8.finishCalibration();
-        }))();
     });
 }
+
+var calibrate = async(function* () {
+    console.log("::START CALIBRATION::");
+    bb8.startCalibration();
+
+    yield Promise.delay(5000)
+    console.log("::FINISH CALIBRATION::");
+    bb8.finishCalibration();
+})
 
 function moveHead (angle) {
     angle = angle != undefined ? angle : Math.floor(Math.random() * 270) + 90
     bb8.roll(0, angle);
+    console.log("rolling", angle)
+}
+
+function sleep(angle) {
+    angle = angle != undefined ? angle : Math.floor(Math.random() * 270) + 90
+    bb8.roll(-10, angle);
     console.log("rolling", angle)
 }
 
@@ -54,5 +60,7 @@ exports.connect = connect;
 exports.moveHead = moveHead;
 exports.lookAround = lookAround;
 exports.disco = disco;
+exports.calibrate = calibrate;
+exports.sleep = sleep;
 exports.color = bb8.color;
 

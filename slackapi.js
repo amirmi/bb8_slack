@@ -27,7 +27,7 @@ exports.connect = function (onMessage) {
         var team = rtm.dataStore.getTeamById(rtm.activeTeamId);
 
         // Log the slack team name and the bot's name
-        console.log('Connected to ' + team.name + ' as ' + user.name + ">" + rtm.activeUserId);
+        console.log('Slack API: Connected to ' + team.name + ' as ' + user.name + ">" + rtm.activeUserId);
     });
 
     rtm.on(RTM_EVENTS.MESSAGE, function(e) {
