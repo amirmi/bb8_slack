@@ -16,8 +16,14 @@ function connect() {
     });
 }
 
+function disconnect() {
+    return bb8.disconnect( () => {
+        console.log("disconnected");
+    })
+}
+
 function reset() {
-    bb8.color(0x000000);
+    return bb8.color(0x000000);
 }
 
 var calibrate = async(function* () {
@@ -26,7 +32,7 @@ var calibrate = async(function* () {
 
     yield Promise.delay(5000)
     console.log("::FINISH CALIBRATION::");
-    bb8.finishCalibration();
+    return bb8.finishCalibration();
 })
 
 function moveHead (angle) {
@@ -61,6 +67,7 @@ var disco = async(function *() {
 });
 
 exports.connect = connect;
+exports.disconnect = disconnect;
 exports.moveHead = moveHead;
 exports.lookAround = lookAround;
 exports.disco = disco;
