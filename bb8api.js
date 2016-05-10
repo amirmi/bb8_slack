@@ -16,6 +16,10 @@ function connect() {
     });
 }
 
+function reset() {
+    bb8.color(0x000000);
+}
+
 var calibrate = async(function* () {
     console.log("::START CALIBRATION::");
     bb8.startCalibration();
@@ -62,5 +66,5 @@ exports.lookAround = lookAround;
 exports.disco = disco;
 exports.calibrate = calibrate;
 exports.sleep = sleep;
-exports.color = bb8.color;
+exports.reset = reset;
 
