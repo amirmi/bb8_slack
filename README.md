@@ -44,7 +44,7 @@ e.g.
 
 **SLACK_USER**  
 you can see it in the logs, first time after you run npm start
-> Connected to Origami as Mr. Smith>**U02FGJZEU**
+> Connected to XXXX as Mr. Smith>**U02FGJZEU**
 
 
 
