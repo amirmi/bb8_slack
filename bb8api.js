@@ -74,4 +74,5 @@ exports.disco = disco;
 exports.calibrate = calibrate;
 exports.sleep = sleep;
 exports.reset = reset;
+exports.color = bb8.color;
 
