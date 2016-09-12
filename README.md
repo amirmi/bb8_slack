@@ -3,6 +3,8 @@ a quick example of how to connect your personal BB-8 (or Sphero gadget) to Slack
 
 Built on top of sphero.js (https://github.com/orbotix/sphero.js) and node-slack-client (https://github.com/slackhq/node-slack-client)
 
+[![Real Life Example](http://img.youtube.com/vi/B-FMYzTvrYE/0.jpg)](http://www.youtube.com/watch?v=B-FMYzTvrYE)
+
 Usage:
 -----
 
